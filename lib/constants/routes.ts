@@ -8,6 +8,9 @@ const routes = {
   },
   dashboard: '/',
   recommendations: '/recommendations',
+  recommendationsArchive() {
+    return this.recommendations + '/archive';
+  },
   policies: '/policies',
   events: '/events',
   waivers: '/waivers',

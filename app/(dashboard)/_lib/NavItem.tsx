@@ -56,7 +56,7 @@ const NavItem: FC<NavItemProps> = (props) => {
 
   const isActiveLink = useCallback(
     (link: string) => {
-      return pathname.includes(link);
+      return pathname === link;
     },
     [pathname]
   );
@@ -78,8 +78,6 @@ const NavItem: FC<NavItemProps> = (props) => {
             px: 2,
             backgroundColor: (theme) => theme.palette.primary.transparent,
             color: (theme) => theme.palette.primary.main,
-            borderLeft: (theme) => `4px solid ${theme.palette.primary.main}`,
-            // boxShadow: 'rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem',
             transition: 'box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
           }),
 

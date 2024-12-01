@@ -70,7 +70,7 @@ export const theme = createTheme({
       default: '#fefcff',
     },
     primary: {
-      main: '#24B5B1',
+      main: '#39a7c1',
       transparent: 'rgba(231, 241, 244, 0.5)',
     },
     secondary: {
@@ -241,6 +241,11 @@ export const theme = createTheme({
       },
     },
     MuiButton: {
+      styleOverrides: {
+        root: {
+          fontWeight: 500,
+        },
+      },
       variants: [
         {
           props: { size: 'large' },
@@ -307,10 +312,10 @@ export const theme = createTheme({
 
 theme.typography.h1 = {
   ...theme.typography.h1,
-  fontSize: '5rem',
+  fontSize: '3rem',
   lineHeight: '72px',
   letterSpacing: '-1.5px',
-  fontWeight: 400,
+  fontWeight: 500,
 };
 
 theme.typography.h2 = {
