@@ -71,7 +71,7 @@ export const theme = createTheme({
     },
     primary: {
       main: '#24B5B1',
-      transparent: 'rgba(131, 38, 208, 0.1)',
+      transparent: 'rgba(231, 241, 244, 0.5)',
     },
     secondary: {
       main: '#d0c099',
