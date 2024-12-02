@@ -1,4 +1,5 @@
 'use client';
+import { DRAWER_WIDTH } from '@/app/(dashboard)/_lib/constants';
 import SideDrawer from '@/app/(dashboard)/_lib/SideDrawer';
 import { Box, CssBaseline, Stack } from '@mui/material';
 import { ReactNode } from 'react';
@@ -23,20 +24,13 @@ export default function AppLayout(props: Props) {
         component="main"
         sx={{
           flexGrow: 1,
+          flexShrink: 0,
+          minHeight: '100vh',
+          p: 2,
+          width: `calc(100vw - ${DRAWER_WIDTH}px)`,
         }}
       >
-        <Stack direction="row" justifyContent="space-between">
-          <Stack
-            sx={{
-              minWidth: '100%',
-              minHeight: '100vh',
-            }}
-          >
-            <Box pt={4} p={3} flexGrow={1}>
-              {props.children}
-            </Box>
-          </Stack>
-        </Stack>
+        {props.children}
       </Box>
     </Box>
   );

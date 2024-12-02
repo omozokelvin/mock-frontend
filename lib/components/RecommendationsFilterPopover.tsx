@@ -16,7 +16,7 @@ type Props = {
   id?: string;
 };
 
-export default function FilterPopover(props: Props) {
+export default function RecommendationsFilterPopover(props: Props) {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );

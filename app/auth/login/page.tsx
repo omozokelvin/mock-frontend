@@ -45,77 +45,75 @@ function LoginPage() {
   const { errors, touched, handleSubmit, getFieldProps } = formik;
 
   return (
-    <main>
-      <FormikProvider value={formik}>
-        <Form noValidate autoComplete="off" onSubmit={handleSubmit}>
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="flex-start"
-            rowGap={2}
-          >
-            <Typography variant="h5">Welcome to Aryon</Typography>
+    <FormikProvider value={formik}>
+      <Form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-start"
+          rowGap={2}
+        >
+          <Typography variant="h5">Welcome to Aryon</Typography>
 
-            <FormControl fullWidth>
-              <FormLabel>Username</FormLabel>
-              <TextField
-                id="username"
-                variant="outlined"
-                autoComplete="off"
-                type="username"
-                {...getFieldProps('username')}
-                error={Boolean(touched.username && errors.username)}
-                helperText={
-                  <ErrorHelperText
-                    touched={touched.username}
-                    errorMessage={errors.username}
-                  />
-                }
-              />
-            </FormControl>
+          <FormControl fullWidth>
+            <FormLabel>Username</FormLabel>
+            <TextField
+              id="username"
+              variant="outlined"
+              autoComplete="off"
+              type="username"
+              {...getFieldProps('username')}
+              error={Boolean(touched.username && errors.username)}
+              helperText={
+                <ErrorHelperText
+                  touched={touched.username}
+                  errorMessage={errors.username}
+                />
+              }
+            />
+          </FormControl>
 
-            <FormControl fullWidth>
-              <FormLabel>Password</FormLabel>
-              <PasswordTextField
-                id="password"
-                variant="outlined"
-                autoComplete="off"
-                {...getFieldProps('password')}
-                error={Boolean(touched.password && errors.password)}
-                helperText={
-                  <ErrorHelperText
-                    touched={touched.password}
-                    errorMessage={errors.password}
-                  />
-                }
-              />
-              <AppLink
-                href={routes.resetPassword()}
-                sx={{
-                  ml: 'auto',
-                  mt: '0.5rem',
-                  typography: 'body2',
-                  letterSpacing: '1px',
-                  color: 'gold.700',
-                }}
-              >
-                Forgot Password?
-              </AppLink>
-            </FormControl>
-
-            <LoadingButton
-              fullWidth
-              variant="contained"
-              type="submit"
-              size="large"
-              loading={isAuthenticating}
+          <FormControl fullWidth>
+            <FormLabel>Password</FormLabel>
+            <PasswordTextField
+              id="password"
+              variant="outlined"
+              autoComplete="off"
+              {...getFieldProps('password')}
+              error={Boolean(touched.password && errors.password)}
+              helperText={
+                <ErrorHelperText
+                  touched={touched.password}
+                  errorMessage={errors.password}
+                />
+              }
+            />
+            <AppLink
+              href={routes.resetPassword()}
+              sx={{
+                ml: 'auto',
+                mt: '0.5rem',
+                typography: 'body2',
+                letterSpacing: '1px',
+                color: 'gold.700',
+              }}
             >
-              SIGN IN
-            </LoadingButton>
-          </Box>
-        </Form>
-      </FormikProvider>
-    </main>
+              Forgot Password?
+            </AppLink>
+          </FormControl>
+
+          <LoadingButton
+            fullWidth
+            variant="contained"
+            type="submit"
+            size="large"
+            loading={isAuthenticating}
+          >
+            SIGN IN
+          </LoadingButton>
+        </Box>
+      </Form>
+    </FormikProvider>
   );
 }
 

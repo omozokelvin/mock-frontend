@@ -312,24 +312,21 @@ export const theme = createTheme({
 
 theme.typography.h1 = {
   ...theme.typography.h1,
-  fontSize: '3rem',
-  lineHeight: '72px',
+  fontSize: '2.5rem',
   letterSpacing: '-1.5px',
   fontWeight: 500,
 };
 
 theme.typography.h2 = {
   ...theme.typography.h2,
-  fontSize: '3.75rem',
-  lineHeight: '72px',
+  fontSize: '1.8rem',
   letterSpacing: '-0.5px',
-  fontWeight: 400,
+  fontWeight: 500,
 };
 
 theme.typography.h3 = {
   ...theme.typography.h3,
   fontSize: '3rem',
-  lineHeight: '48px',
   letterSpacing: '0px',
   fontWeight: 400,
 };
@@ -337,12 +334,8 @@ theme.typography.h3 = {
 theme.typography.h4 = {
   ...theme.typography.h4,
   fontSize: '2.125rem',
-  lineHeight: '36px',
   fontWeight: 400,
   letterSpacing: '0px',
-  // [theme.breakpoints.down('md')]: {
-  //   ...theme.typography.h5,
-  // },
 };
 
 theme.typography.h5 = {

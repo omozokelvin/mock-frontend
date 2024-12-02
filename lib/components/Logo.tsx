@@ -1,6 +1,5 @@
 import ICON from '@@/images/logo.png';
 import Image from 'next/image';
-import { CSSProperties } from 'react';
 
 type Props = {
   width?: number;
